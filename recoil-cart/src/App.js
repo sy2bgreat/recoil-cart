@@ -17,16 +17,7 @@ const ids = [
   { name: 'Pepper', src: pepperHot, id:5 },
   { name: 'Pizze Slice!', src: pizzaSlice, id:6 },
 ];
-//const addieItem = AddItem()
 
-// const lists = ids.map((list, index) => {
-//   return (
-//     <div className="home-card" key={index}>
-//       <img src={list.src} className="home-card_img"></img>
-//       <h3>{list.name}</h3>
-//     </div>
-//   );
-// });
 
 function App() {
   const { totalQty } = useRecoilValue(cartState);

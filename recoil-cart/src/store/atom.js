@@ -4,7 +4,7 @@ export const cart = atom({
   key: 'cart',
   default: [],
 });
-
+ 
 
 export const cartState = selector({
   key: 'cartState',
@@ -16,14 +16,19 @@ export const cartState = selector({
 }
 });
 
+// export const addFood = selector({
+//   key: 'addFood',
+//   set: ({set, get}, newFood) => {
+//     set(cart, [...get(cart),newFood])
+//     console.log(...get(cart));
+//   },
+
+// })
+
 export const addFood = selector({
   key: 'addFood',
-  set: ({set, get}, newFood) => {
-    set(cart, [...get(cart),newFood])
-  },
-
-})
-
+  set: ({ set, get }, newValue) => set(cart, [...get(cart),newValue]),
+});
 
 
 // const cloneIndex = (items, id) => ({
